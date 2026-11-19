@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#176b45">
+<title>املاک ایده‌آل تالش | خرید، فروش و اجاره ملک</title>
+<meta name="description" content="املاک ایده‌آل تالش؛ خرید، فروش و اجاره زمین، ویلا و آپارتمان در تالش و مناطق دیدنی گیلان.">
+<style>
+:root{--green:#176b45;--deep:#104b33;--mint:#eaf5ee;--cream:#fbfdfb;--ink:#203128;--muted:#6c7b72;--line:#dce9df;--gold:#d8ad58}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
+header{background:linear-gradient(125deg,#104b33,#238457);color:#fff;padding:20px 5% 54px;position:relative;overflow:hidden}
+header:after{content:"";position:absolute;width:360px;height:360px;border:1px solid #ffffff22;border-radius:50%;left:-100px;top:-190px;box-shadow:0 0 0 35px #ffffff0c,0 0 0 75px #ffffff08}
+nav,.navlinks,.brand{display:flex;align-items:center;justify-content:space-between;gap:18px;position:relative;z-index:1}
+.brand{justify-content:flex-start;font-weight:bold;font-size:19px}.logo{width:46px;height:46px;border-radius:15px;background:#ffffff1d;display:grid;place-items:center;font-size:25px}
+.navlinks a{font-size:14px;color:#eff8f1}.hero{max-width:1100px;margin:54px auto 0;position:relative;z-index:1}
+.eyebrow{color:#d5eddb;font-size:13px}.hero h1{font-size:clamp(27px,5vw,48px);line-height:1.5;margin:8px 0}.hero p{color:#e3f1e7;max-width:650px;margin:0 0 24px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:11px 18px;cursor:pointer;font-weight:bold;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn-light{background:#fff;color:var(--deep)}.btn-outline{background:#ffffff16;border:1px solid #ffffff70;color:#fff}.btn-green{background:var(--green);color:#fff}.btn-soft{background:var(--mint);color:var(--deep)}.btn-danger{background:#fff0ef;color:#a33b35}
+main{max-width:1100px;margin:-25px auto 0;padding:0 18px;position:relative;z-index:2}
+.searchbox{background:#fff;border:1px solid var(--line);box-shadow:0 12px 35px #153b2410;border-radius:18px;padding:16px;display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:10px}
+.field{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);outline-color:var(--green)}
+section{padding:42px 0}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:18px}.sectionhead h2{margin:0;font-size:25px}.sectionhead p{margin:3px 0 0;color:var(--muted);font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:0 5px 20px #173b2408}
+.photo{height:190px;background:linear-gradient(135deg,#dcefe1,#9cc8a9);display:grid;place-items:center;color:#477b58;font-size:45px;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover}
+.cardbody{padding:15px}.tag{display:inline-block;background:var(--mint);color:var(--green);font-size:11px;padding:3px 9px;border-radius:30px}
+.card h3{font-size:17px;margin:9px 0 4px}.location{font-size:13px;color:var(--muted)}.price{font-weight:bold;color:var(--green);margin-top:10px}.details{display:flex;gap:13px;flex-wrap:wrap;color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:12px;padding-top:10px}
+.cardactions{display:flex;gap:7px;margin-top:13px}.cardactions .btn{padding:8px 10px;font-size:12px;flex:1}
+.empty{background:#fff;border:1px dashed #b8d2bf;border-radius:16px;padding:35px;text-align:center;color:var(--muted);grid-column:1/-1}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{padding:19px;background:#f0f7f1;border:1px solid var(--line);border-radius:15px}.feature b{display:block;color:var(--deep);margin-bottom:4px}.feature span{font-size:13px;color:var(--muted)}
+.contact{background:#edf6ef;border:1px solid var(--line);border-radius:20px;padding:25px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+footer{background:#103f2d;color:#e5f2e8;padding:27px 5%;text-align:center;font-size:13px;margin-top:25px}footer small{color:#b9d5c2}
+.modal{position:fixed;inset:0;background:#0b2419a8;z-index:10;display:none;align-items:center;justify-content:center;padding:16px}.modal.open{display:flex}.dialog{background:#fff;border-radius:18px;padding:22px;width:min(600px,100%);max-height:92vh;overflow:auto}.dialog h2{margin:0 0 15px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.formgrid label{font-size:13px;color:var(--muted)}.formgrid input,.formgrid select,.formgrid textarea{display:block;width:100%;margin-top:5px}.formgrid .full{grid-column:1/-1}.dialogactions{display:flex;gap:9px;margin-top:16px}
+#adminStatus{font-size:12px;color:#cce7d3}
+@media(max-width:760px){.searchbox{grid-template-columns:1fr 1fr}.searchbox input:first-child{grid-column:1/-1}.cards{grid-template-columns:1fr 1fr}.features{grid-template-columns:1fr}.contact{display:block}.navlinks{gap:9px}.navlinks a{font-size:12px}}
+@media(max-width:480px){header{padding-left:18px;padding-right:18px}.navlinks a:first-child{display:none}.brand{font-size:16px}.cards{grid-template-columns:1fr}.searchbox{grid-template-columns:1fr}.searchbox input:first-child{grid-column:auto}.sectionhead{align-items:start;flex-direction:column}.formgrid{grid-template-columns:1fr}.formgrid .full{grid-column:auto}}
+</style>
+</head>
+<body>
+<header>
+<nav>
+ <div class="brand"><div class="logo">🏡</div><div>املاک ایده‌آل تالش<br><small style="font-size:11px;font-weight:normal;color:#d5eddb">همراه مطمئن شما در انتخاب ملک</small></div></div>
+ <div class="navlinks"><a href="#listings">آگهی‌ها</a><a href="#about">درباره ما</a><a href="#contact">ارتباط با ما</a></div>
+</nav>
+<div class="hero">
+ <div class="eyebrow">🌿 از طبیعت زیبای تالش تا خانه رؤیایی شما</div>
+ <h1>ملک ایده‌آل‌تان را در تالش پیدا کنید</h1>
+ <p>برای خرید، فروش و معرفی زمین، ویلا و آپارتمان در تالش و مناطق خوش‌آب‌وهوای گیلان همراه شما هستیم.</p>
+ <div class="actions"><a class="btn btn-light" href="#listings">مشاهده آگهی‌ها ←</a><a class="btn btn-outline" href="tel:09113462950">تماس مستقیم</a></div>
+</div>
+</header>
+<main>
+<div class="searchbox">
+ <input class="field" id="searchText" placeholder="جست‌وجو در عنوان یا منطقه...">
+ <select class="field" id="typeFilter"><option value="">همه نوع ملک</option><option>زمین</option><option>ویلا</option><option>آپارتمان</option><option>خانه</option><option>تجاری</option></select>
+ <select class="field" id="dealFilter"><option value="">همه معاملات</option><option>فروش</option><option>اجاره</option><option>رهن و اجاره</option></select>
+ <button class="btn btn-green" onclick="renderListings()">جست‌وجو</button>
+</div>
+<section id="listings">
+ <div class="sectionhead"><div><h2>آخرین فایل‌های ملکی</h2><p>آگهی‌های منتخب املاک ایده‌آل تالش</p></div><button class="btn btn-green" onclick="openAdmin()">＋ افزودن آگهی</button></div>
+ <div class="cards" id="listingCards"></div>
+</section>
+<section id="about">
+ <div class="sectionhead"><div><h2>چرا املاک ایده‌آل تالش؟</h2><p>شفافیت، همراهی و شناخت منطقه</p></div></div>
+ <div class="features">
+  <div class="feature">🌱 <b>شناخت منطقه</b><span>معرفی فایل‌های ملکی در تالش و روستاهای دیدنی اطراف</span></div>
+  <div class="feature">🤝 <b>همراهی تا انتخاب</b><span>پاسخ‌گویی و هماهنگی برای دریافت اطلاعات و بازدید ملک</span></div>
+  <div class="feature">🏡 <b>تنوع فایل‌ها</b><span>زمین، ویلا، خانه و آپارتمان برای نیازهای مختلف</span></div>
+ </div>
+</section>
+<section id="contact">
+ <div class="contact"><div><h2 style="margin:0 0 5px">برای مشاوره و بازدید تماس بگیرید</h2><div style="color:var(--muted)">املاک ایده‌آل تالش | مجتبی آدم‌پیرا</div><strong style="color:var(--green);direction:ltr;display:inline-block;margin-top:8px">09113462950</strong></div>
+ <div class="actions"><a class="btn btn-green" href="tel:09113462950">تماس تلفنی</a><a class="btn btn-soft" target="_blank" rel="noopener" href="https://wa.me/989113462950">پیام در واتساپ</a></div></div>
+</section>
+</main>
+<footer>© املاک ایده‌آل تالش <br><small>تالش، گیلان | خرید • فروش • اجاره ملک</small></footer>
+
+<div class="modal" id="adminModal">
+ <div class="dialog">
+  <h2 id="formTitle">افزودن آگهی جدید</h2>
+  <div id="loginArea">
+   <p style="color:var(--muted);font-size:13px">برای مدیریت آگهی‌ها رمز پنل را وارد کنید.</p>
+   <input class="field" id="adminPin" type="password" placeholder="رمز پنل">
+   <div class="dialogactions"><button class="btn btn-green" onclick="loginAdmin()">ورود</button><button class="btn btn-soft" onclick="closeAdmin()">بستن</button></div>
+   <p style="font-size:11px;color:#9a6a32">رمز اولیه: ideal1234 (پس از ورود می‌توانید آن را تغییر دهید.)</p>
+  </div>
+  <div id="editorArea" style="display:none">
+   <form id="listingForm" onsubmit="saveListing(event)">
+    <input type="hidden" id="editId">
+    <div class="formgrid">
+     <label>عنوان آگهی<input class="field" id="title" required placeholder="مثلاً زمین در مریان"></label>
+     <label>نوع ملک<select class="field" id="type"><option>زمین</option><option>ویلا</option><option>آپارتمان</option><option>خانه</option><option>تجاری</option></select></label>
+     <label>نوع معامله<select class="field" id="deal"><option>فروش</option><option>اجاره</option><option>رهن و اجاره</option></select></label>
+     <label>منطقه / آدرس<input class="field" id="location" required placeholder="مثلاً تالش، مریان"></label>
+     <label>متراژ (متر مربع)<input class="field" id="area" type="number" min="0" placeholder="مثلاً 300"></label>
+     <label>قیمت / ودیعه<input class="field" id="price" required placeholder="مثلاً ۱ میلیارد و ۵۰۰ میلیون تومان"></label>
+     <label class="full">توضیحات<textarea class="field" id="description" rows="3" placeholder="مشخصات و توضیحات ملک..."></textarea></label>
+     <label class="full">لینک عکس (اختیاری)<input class="field" id="imageUrl" type="url" placeholder="https://..."></label>
+    </div>
+    <div class="dialogactions"><button class="btn btn-green" type="submit">ذخیره آگهی</button><button class="btn btn-soft" type="button" onclick="closeAdmin()">انصراف</button></div>
+   </form>
+   <div style="border-top:1px solid var(--line);margin-top:18px;padding-top:14px">
+    <button class="btn btn-soft" onclick="changePin()">تغییر رمز پنل</button>
+    <button class="btn btn-danger" onclick="logoutAdmin()">خروج از مدیریت</button>
+   </div>
+  </div>
+ </div>
+</div>
+<script>
+const PHONE='09113462950';
+const STORE='idealTaleshListings_v1';
+let listings=JSON.parse(localStorage.getItem(STORE)||'[]');
+let loggedIn=false;
+let pin=localStorage.getItem('idealTaleshPin')||'ideal1234';
+function persist(){localStorage.setItem(STORE,JSON.stringify(listings))}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderListings(){
+ const q=document.getElementById('searchText').value.trim().toLowerCase(),t=document.getElementById('typeFilter').value,d=document.getElementById('dealFilter').value;
+ const filtered=listings.filter(x=>(!q||(x.title+' '+x.location+' '+x.description).toLowerCase().includes(q))&&(!t||x.type===t)&&(!d||x.deal===d));
+ const host=document.getElementById('listingCards');
+ if(!filtered.length){host.innerHTML='<div class="empty"><div style="font-size:35px">🌿</div><b>هنوز آگهی‌ای ثبت نشده است</b><br><span>برای افزودن اولین ملک، روی دکمه «افزودن آگهی» بزنید.</span></div>';return}
+ host.innerHTML=filtered.map(x=>`<article class="card"><div class="photo">${x.image?`<img src="${esc(x.image)}" alt="${esc(x.title)}" onerror="this.parentElement.textContent='🏡'">`:'🏡'}</div><div class="cardbody"><span class="tag">${esc(x.deal)} · ${esc(x.type)}</span><h3>${esc(x.title)}</h3><div class="location">📍 ${esc(x.location)}</div><div class="price">${esc(x.price)}</div><div class="details">${x.area?`<span>📐 ${esc(x.area)} متر</span>`:''}<span>☎ تماس برای جزئیات</span></div>${x.description?`<p style="font-size:13px;color:var(--muted)">${esc(x.description)}</p>`:''}<div class="cardactions"><a class="btn btn-green" href="tel:${PHONE}">تماس</a><a class="btn btn-soft" target="_blank" rel="noopener" href="https://wa.me/989113462950?text=${encodeURIComponent('سلام، درباره آگهی '+x.title+' سوال داشتم.')}">واتساپ</a>${loggedIn?`<button class="btn btn-soft" onclick="editListing('${x.id}')">ویرایش</button><button class="btn btn-danger" onclick="deleteListing('${x.id}')">حذف</button>`:''}</div></div></article>`).join('');
+}
+function openAdmin(){document.getElementById('adminModal').classList.add('open');document.getElementById('loginArea').style.display=loggedIn?'none':'block';document.getElementById('editorArea').style.display=loggedIn?'block':'none'}
+function closeAdmin(){document.getElementById('adminModal').classList.remove('open')}
+function loginAdmin(){if(document.getElementById('adminPin').value===pin){loggedIn=true;openAdmin();renderListings()}else alert('رمز واردشده درست نیست.')}
+function logoutAdmin(){loggedIn=false;openAdmin();renderListings()}
+function saveListing(e){e.preventDefault();if(!loggedIn)return;const id=document.getElementById('editId').value||String(Date.now());const item={id,title:title.value.trim(),type:type.value,deal:deal.value,location:location.value.trim(),area:area.value,price:price.value.trim(),description:description.value.trim(),image:imageUrl.value.trim()};const i=listings.findIndex(x=>x.id===id);if(i>=0)listings[i]=item;else listings.unshift(item);persist();document.getElementById('listingForm').reset();document.getElementById('editId').value='';document.getElementById('formTitle').textContent='افزودن آگهی جدید';closeAdmin();renderListings();alert('آگهی در همین مرورگر ذخیره شد.')}
+function editListing(id){const x=listings.find(a=>a.id===id);if(!x)return;openAdmin();document.getElementById('loginArea').style.display='none';document.getElementById('editorArea').style.display='block';document.getElementById('formTitle').textContent='ویرایش آگهی';for(const k of ['title','type','deal','location','area','price','description'])document.getElementById(k).value=x[k]||'';document.getElementById('imageUrl').value=x.image||'';document.getElementById('editId').value=x.id}
+function deleteListing(id){if(confirm('این آگهی حذف شود؟')){listings=listings.filter(x=>x.id!==id);persist();renderListings()}}
+function changePin(){const next=prompt('رمز جدید پنل را وارد کنید (حداقل ۶ کاراکتر):');if(next&&next.length>=6){pin=next;localStorage.setItem('idealTaleshPin',pin);alert('رمز در همین مرورگر تغییر کرد.')}else if(next)alert('رمز باید حداقل ۶ کاراکتر باشد.')}
+renderListings();
+</script>
+</body>
+</html>
